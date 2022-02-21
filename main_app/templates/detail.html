@@ -7,14 +7,18 @@
         <h3>{{ beer.brewery }}</h3>
         <h4> {{ beer.name }}</a></h3>
         <p> {{ beer.profile }}</p>
-        <a href="{% url 'beers_update' beer.id %}">Edit</a>
-        <a href="{% url 'beers_delete' beer.id %}">Delete</a>
+       
         {%for photo in beer.photo_set.all%}
       
         <img src="{{photo.url}}" alt="">
         {% empty %}
         <p>No Photos Uploaded</p>
         {% endfor %}
+    </div>
+    <div>
+        <a href="{% url 'beers_update' beer.id %}">Edit</a>
+        <a href="{% url 'beers_delete' beer.id %}">Delete</a>
+
     </div>
     <form action="{% url 'add_photo' beer.id %}"
           enctype="multipart/form-data"
