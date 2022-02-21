@@ -8,6 +8,10 @@ from django.contrib.auth import login
 
 from django.contrib.auth.forms import UserCreationForm
 
+from django.contrib.auth.decorators import login_required
+
+from django.contrib.auth.mixins import LoginRequiredMixin
+
 from .models import Beer
 
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
@@ -15,10 +19,12 @@ from django.views.generic.edit import CreateView, UpdateView, DeleteView
 def landing(request):
     return render(request, 'landing.html')
 
+@login_required
 def feed(request):
     beers = Beer.objects.filter(user=request.user)
     return render(request, 'feed.html', {'beers':beers})
 
+@login_required
 def beers_detail(request, beer_id):
     beer=Beer.objects.get(id=beer_id)
     return render(request, 'detail.html', {'beer' : beer})
@@ -26,15 +32,17 @@ def beers_detail(request, beer_id):
 def about(request):
     return render(request, 'about.html')
 
-class BeerCreate(CreateView):
+
+class BeerCreate(LoginRequiredMixin, CreateView):
     model = Beer
     fields = ('__all__')
 
-class BeerDelete(DeleteView):
+
+class BeerDelete(LoginRequiredMixin, DeleteView):
     model = Beer
     success_url = '/beers/'
 
-class BeerUpdate(UpdateView):
+class BeerUpdate(LoginRequiredMixin, UpdateView):
     model = Beer
     fields = ['brewery', 'name', 'profile']
 
