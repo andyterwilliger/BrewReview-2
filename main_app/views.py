@@ -21,7 +21,7 @@ def feed(request):
     
 
 def about(request):
-    return HttpResponse('<h1> About </h1>')
+    return render(request, 'about.html')
 
 class BeerCreate(CreateView):
     model = Beer
