@@ -17,3 +17,10 @@ class Beer(models.Model):
 
     def get_absolute_url(self):
         return reverse('feed')
+
+class Photo(models.Model):
+    url = models.CharField(max_length=100)
+    beer = models.ForeignKey(Beer, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return f"Photo for beer_id: {self.beer_id} @{self.url}"
