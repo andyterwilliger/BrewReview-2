@@ -2,18 +2,18 @@
 
 {% block content %}
 
-<h1>Your Beers</h1>
-
-{% for beer in beers%}
 <div class='card bg-warning'>
     <div class='card-body text-center'>
         <h3>{{ beer.brewery }}</h3>
-        <h4> <a href="/beers/{{ beer.id }}">{{ beer.name }}</a></h3>
+        <h4> {{ beer.name }}</a></h3>
         <p> {{ beer.profile }}</p>
-       
+        <a href="{% url 'beers_update' beer.id %}">Edit</a>
+        <a href="{% url 'beers_delete' beer.id %}">Delete</a>
     </div>
 </div>
 
 
-{% endfor %}
+
+
+
 {% endblock %}
