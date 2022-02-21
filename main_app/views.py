@@ -10,13 +10,13 @@ from django.contrib.auth.forms import UserCreationForm
 
 from .models import Beer
 
-from django.views.generic.edit import CreateView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 
 def landing(request):
     return render(request, 'landing.html')
 
 def feed(request):
-    beers = Beer.objects.filter(user=request.user)
+    beers = Beer.objects.all()
     return render(request, 'feed.html', {'beers':beers})
     
 
@@ -25,7 +25,15 @@ def about(request):
 
 class BeerCreate(CreateView):
     model = Beer
-    fields = '__all__'
+    fields = ('__all__')
+
+class BeerDelete(DeleteView):
+    model = Beer
+    success_url = '/beers/'
+
+class BeerUpdate(UpdateView):
+    model = Beer
+    fields = ['brewery', 'name', 'profile']
 
 def signup(request):
     error_message = ''

@@ -8,6 +8,7 @@ urlpatterns = [
     path('beer/add/', views.BeerCreate.as_view(), name = 'beer_add' ),
     path('about/', views.about, name = 'about'),
     path('accounts/signup/', views.signup, name = 'signup'),
-
+    path('beers/<int:pk>/update/', views.BeerUpdate.as_view(), name = 'beers_update'),
+    path('beers/<int:pk>/delete/', views.BeerDelete.as_view(), name = 'beers_delete')
 
 ]
