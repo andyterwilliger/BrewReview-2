@@ -16,7 +16,7 @@ def landing(request):
     return render(request, 'landing.html')
 
 def feed(request):
-    beers = Beer.objects.all()
+    beers = Beer.objects.filter(user=request.user)
     return render(request, 'feed.html', {'beers':beers})
 
 def beers_detail(request, beer_id):
