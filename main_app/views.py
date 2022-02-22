@@ -51,7 +51,7 @@ class BeerDelete(LoginRequiredMixin, DeleteView):
 
 class BeerUpdate(LoginRequiredMixin, UpdateView):
     model = Beer
-    fields = ['brewery', 'name', 'profile']
+    fields = ('brewery', 'name', 'profile')
 
 def signup(request):
     error_message = ''

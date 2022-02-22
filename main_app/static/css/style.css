@@ -1,6 +1,19 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
 body{
     font-family: 'Anton', sans-serif;
+    
+    
 }
+
+#beer_feed{
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
 
 #beer_form_container{
     display: flex;
@@ -9,7 +22,9 @@ body{
     
 }
 
+
+
 img{
     border-radius: 10px;
-    width: 25%;
+    width: 50%;
 }
