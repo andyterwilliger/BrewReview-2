@@ -9,18 +9,15 @@ body{
     
 }
 
+h1{
+    text-align: center;
+}
+
 #beer_feed{
     margin-left: 25%;
     margin-right: 25%;
 }
 
-
-#beer_form_container{
-    display: flex;
-    justify-content: center;
-    
-    
-}
 
 
 
@@ -42,6 +39,32 @@ img{
     background-color: #395C6B;
 }
 
+#form-body{
+    background-color: #395C6B;
+}
 #detail-card{
     margin: 0 15% 0 15%;
+}
+
+section{
+    background-color: beige;
+    margin: 3% 25% 0 25%;
+    padding: 2%;
+    border-radius: 10px;
+
+}
+
+#beer_form_container{
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+    margin-top: 3%;
+    border-radius: 10px;
+}
+
+
+
+ input{
+    border-radius: 10px;
+    width: 100%;
 }
