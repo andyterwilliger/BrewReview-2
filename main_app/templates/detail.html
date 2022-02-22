@@ -10,7 +10,7 @@
        
         {%for photo in beer.photo_set.all%}
       
-        <img src="{{photo.url}}" alt="">
+        <img id = 'detail-img' src="{{photo.url}}" alt="">
         {% empty %}
         <p>No Photos Uploaded</p>
         {% endfor %}
@@ -20,6 +20,7 @@
         <a href="{% url 'beers_delete' beer.id %}">Delete</a>
 
     </div>
+    <div id = 'photo-form'>
     <form action="{% url 'add_photo' beer.id %}"
           enctype="multipart/form-data"
           method="POST"
@@ -31,7 +32,7 @@
         <input type="submit" value="Upload Photo">
 
     </form>
-
+</div>
 
 </div>
 

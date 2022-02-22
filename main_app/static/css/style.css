@@ -28,3 +28,12 @@ img{
     border-radius: 10px;
     width: 50%;
 }
+
+#photo-form{
+    display: flex;
+    justify-content: center;
+}
+
+#detail-img{
+    width:40%;
+}
