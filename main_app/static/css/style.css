@@ -9,6 +9,8 @@ body{
     
 }
 
+
+
 h1{
     text-align: center;
 }
@@ -33,6 +35,7 @@ img{
 
 #detail-img{
     width:40%;
+   
 }
 
 #feed-body{
@@ -42,13 +45,11 @@ img{
 #form-body{
     background-color: #395C6B;
 }
-#detail-card{
-    margin: 0 15% 0 15%;
-}
+
 
 section{
     background-color: beige;
-    margin: 3% 25% 0 25%;
+    margin: 3% 15% 0 15%;
     padding: 2%;
     border-radius: 10px;
 

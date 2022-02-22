@@ -2,45 +2,53 @@
 
 {% block content %}
 
-<div id = 'detail-card' class='card bg-warning'>
-    <div class='card-body text-center'>
-        <h3>{{ beer.brewery }}</h3>
-        <h4> {{ beer.name }}</a></h3>
-        <p> {{ beer.type }} </p>
-        <p> {{ beer.profile }}</p>
-        <p> {{beer.abv}} </p> 
-        <p> {{beer.location}}</p>   
-    
-       
+<body id='detail-body'>
+    <section id='detail-container'>
         {%for photo in beer.photo_set.all%}
-      
-        <img id = 'detail-img' src="{{photo.url}}" alt="">
-        {% empty %}
-        <p>No Photos Uploaded</p>
-        {% endfor %}
-    </div>
-    <div>
-        <a href="{% url 'beers_update' beer.id %}">Edit</a>
-        <a href="{% url 'beers_delete' beer.id %}">Delete</a>
-
-    </div>
-    <div id = 'photo-form'>
-    <form action="{% url 'add_photo' beer.id %}"
-          enctype="multipart/form-data"
-          method="POST"
-
-    >
-        {% csrf_token %}
-        <input type="file" name="photo-file">
-        <br> <br>
-        <input type="submit" value="Upload Photo">
-
-    </form>
-</div>
-
-</div>
+        <div id='detail-img-card'>
+            <img id='detail-img' src="{{photo.url}}" alt="">
+            {% empty %}
+            <p>No Photos Uploaded</p>
+            {% endfor %}
+        </div>
 
 
+        <div id='detail-card' class='card'>
+            <div class='card-body text-center'>
+                <h3>{{ beer.brewery }}</h3> 
+                <h4> {{ beer.name }}</a></h3> <br>
+                    <p>Type: {{ beer.type }} </p> <br>
+                    <p>Flavor Profile: {{ beer.profile }}</p> <br>
+                    <p>ABV:{{beer.abv}} </p> <br>
+                    <p>Location: {{beer.location}}</p> <br>
+
+
+            </div>
+
+            <div id='photo-form'>
+                <form action="{% url 'add_photo' beer.id %}" enctype="multipart/form-data" method="POST">
+                    {% csrf_token %}
+                    <input type="file" name="photo-file">
+                    <br> <br>
+                    <input type="submit" value="Upload Photo"> <br> <br>
+
+                </form>
+            </div>
+            <div id='edit-div'>
+               <button class = 'edit-delete'> <a href="{% url 'beers_update' beer.id %}">Edit</a></button> 
+
+            </div>
+            <br> 
+
+            <div id='delete-div'>
+
+             <button class='edit-delete'>  <a href="{% url 'beers_delete' beer.id %}">Delete</a> </button> 
+
+            </div>
+        </div>
+        </div>
+    </section>
+</body>
 
 
 

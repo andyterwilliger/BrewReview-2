@@ -13,6 +13,7 @@
   <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
   <link rel="stylesheet" type ="text/css" href="{% static 'css/landing.css' %}" />
   <link rel="stylesheet" type ="text/css" href="{% static 'css/feed.css' %}" />
+  <link rel="stylesheet" type ="text/css" href="{% static 'css/detail.css' %}" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
@@ -33,7 +34,7 @@
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav">
           {% if user.is_authenticated %}
-          <li class="active"><a href="/beers">Beers</a></li>
+          <li ><a href="/beers">Beers</a></li>
           <li><a href="{% url 'beer_add'%}">Add Beer</a></li>
           <li><a href="/about">About</a></li>
         </ul>

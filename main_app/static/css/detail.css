@@ -1,0 +1,45 @@
+#detail-body{
+    background-color: #395C6B;
+
+}
+
+#detail-container{
+    display: grid;
+grid-template-columns: repeat(2, 1fr);
+grid-template-rows: 1fr;
+grid-column-gap: 0px;
+grid-row-gap: 0px;
+font-size: 150%;
+}
+
+
+#detail-img-card >img {
+    width: 100%;
+    height: 100%;
+}
+
+#detail-card{
+   
+}
+
+#edit-div{
+    display: flex;
+    justify-content: center;
+    height: 5%;
+    
+}
+
+#delete-div{
+    display: flex;
+    justify-content: center;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.edit-delete{
+    width: 36rem;
+    border-radius: 10px;
+}
