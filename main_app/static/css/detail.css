@@ -12,6 +12,11 @@ grid-row-gap: 0px;
 font-size: 150%;
 }
 
+#detail-card{
+    background-color: #f6ddbe;
+    border-radius: 10px;
+}
+
 
 #detail-img-card >img {
     width: 100%;

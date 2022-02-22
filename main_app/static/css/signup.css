@@ -32,3 +32,9 @@ input[name='password1']{
 input[name='password2']{
     color:black;
 }
+
+@media only screen and (max-width: 450px){
+    #signup-form-container{
+        font-size: 100%;
+    }
+}

@@ -9,7 +9,7 @@
 <h1 id = 'signup-h1'>Sign Up</h1>
 
 {% if error_message %}
-<p>{{ error_message }}</p>
+<p style="color: white;">{{ error_message }}</p>
 {% endif %}
 <div id = 'signup-form-container'>
 <form id = 'signup-form' method="post" action="{% url 'signup' %}">
