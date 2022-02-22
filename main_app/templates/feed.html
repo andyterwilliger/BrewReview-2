@@ -5,6 +5,8 @@
 <h1 style="text-align: center;">Your Beers</h1>
 
 {% for beer in beers%}
+<body id = "feed-body">
+    
 
 <div id = 'beer_feed' class='card bg-warning'>
     <div class='card-body text-center'>
@@ -15,7 +17,9 @@
             {% endfor %}
        
     </div>
+    
 </div>
+</body>
 
 {% endfor %}
 {% endblock %}

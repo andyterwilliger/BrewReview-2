@@ -2,11 +2,15 @@
 
 {% block content %}
 
-<div class='card bg-warning'>
+<div id = 'detail-card' class='card bg-warning'>
     <div class='card-body text-center'>
         <h3>{{ beer.brewery }}</h3>
         <h4> {{ beer.name }}</a></h3>
+        <p> {{ beer.type }} </p>
         <p> {{ beer.profile }}</p>
+        <p> {{beer.abv}} </p> 
+        <p> {{beer.location}}</p>   
+    
        
         {%for photo in beer.photo_set.all%}
       

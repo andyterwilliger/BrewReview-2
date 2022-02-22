@@ -37,3 +37,11 @@ img{
 #detail-img{
     width:40%;
 }
+
+#feed-body{
+    background-color: #395C6B;
+}
+
+#detail-card{
+    margin: 0 15% 0 15%;
+}

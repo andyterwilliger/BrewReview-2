@@ -9,7 +9,13 @@ from django.urls import reverse
 class Beer(models.Model):
     brewery= models.CharField(max_length=50)
     name= models.CharField(max_length=50)
+    type = models.CharField(max_length=50)
     profile=models.CharField(max_length=50)
+    abv= models.IntegerField()
+    location = models.CharField(max_length=50)
+
+
+
     
     user = models.ForeignKey(User, on_delete = models.CASCADE)
 
