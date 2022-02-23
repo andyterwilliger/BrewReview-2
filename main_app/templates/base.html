@@ -17,6 +17,7 @@
   <link rel="stylesheet" type ="text/css" href="{% static 'css/delete_form.css' %}" />
   <link rel="stylesheet" type ="text/css" href="{% static 'css/login.css' %}" />
   <link rel="stylesheet" type ="text/css" href="{% static 'css/signup.css' %}" />
+  <link rel="stylesheet" type ="text/css" href="{% static 'css/blog.css' %}" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
@@ -39,7 +40,7 @@
           {% if user.is_authenticated %}
           <li ><a href="/beers">Beers</a></li>
           <li><a href="{% url 'beer_add'%}">Add Beer</a></li>
-          <li><a href="/about">About</a></li>
+          <li><a href="/blog">Blog</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <li><a href="{% url 'logout' %}">Log Out</a></li>

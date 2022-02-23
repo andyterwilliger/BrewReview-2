@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
-  <title>Document</title>
+  <title>BrewReview</title>
 </head>
 <body id = "landing-body">
 
@@ -32,7 +32,7 @@
           {% if user.is_authenticated %}
           <li class="active"><a href="/beers">Beers</a></li>
           <li><a href="{% url 'beer_add'%}">Add Beer</a></li>
-          <li><a href="/about">About</a></li>
+          <li><a href="/blog">About</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <li><a href="{% url 'logout' %}">Log Out</a></li>

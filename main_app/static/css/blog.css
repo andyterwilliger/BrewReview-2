@@ -1,0 +1,19 @@
+#blog-body{
+    background-color: #395C6B;
+}
+
+#blog-section{
+    background-color: beige;
+}
+
+#blog-post{
+    display: flex;
+    justify-content: center;
+    
+
+}
+
+#blog-img-div{
+    display:flex;
+    justify-content: center;
+}

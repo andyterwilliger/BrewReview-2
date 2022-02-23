@@ -36,8 +36,8 @@ def beers_detail(request, beer_id):
     beer=Beer.objects.get(id=beer_id)
     return render(request, 'detail.html', {'beer' : beer})
 
-def about(request):
-    return render(request, 'about.html')
+def blog (request):
+    return render(request, 'blog.html')
 
 
 class BeerCreate(LoginRequiredMixin, CreateView):
