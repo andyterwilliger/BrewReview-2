@@ -1,0 +1,1 @@
+web: gunicorn brewreview2.wsgi
