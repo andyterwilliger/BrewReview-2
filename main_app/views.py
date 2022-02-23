@@ -42,8 +42,10 @@ def about(request):
 
 class BeerCreate(LoginRequiredMixin, CreateView):
     model = Beer
-    fields = ('__all__')
-
+    fields = ('brewery', 'name', 'type', 'profile', 'abv', 'location')
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        return super().form_valid(form)
 
 class BeerDelete(LoginRequiredMixin, DeleteView):
     model = Beer
