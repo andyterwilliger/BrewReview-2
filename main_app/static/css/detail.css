@@ -13,7 +13,7 @@ font-size: 150%;
 }
 
 #detail-card{
-    background-color: #f6ddbe;
+    border: solid black 2px;
     border-radius: 10px;
 }
 

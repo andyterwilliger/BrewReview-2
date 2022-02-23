@@ -17,3 +17,13 @@
     display:flex;
     justify-content: center;
 }
+
+@media only screen and (max-width: 450px){
+    #blog-h1{
+        font-size: 3rem;
+    }
+    #blog-img{
+        width: 100%;
+    }
+
+}

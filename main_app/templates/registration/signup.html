@@ -6,14 +6,14 @@
   
 
 
-<h1 id = 'signup-h1'>Sign Up</h1>
+<h1 id = 'signup-h1'>Sign Up</h1> <br>
 
 {% if error_message %}
 <p style="color: white;">{{ error_message }}</p>
 {% endif %}
-<div id = 'signup-form-container'>
+<div id = 'signup-form-container'> 
 <form id = 'signup-form' method="post" action="{% url 'signup' %}">
-    {% csrf_token %} {{ form.as_p }}
+    {% csrf_token %} {{ form.as_p }} <br>
     <input id = 'signup-button' type="submit" class="btn" value="Sign Up!" />
     <input type="hidden" name="next" value="{{ next }}" />
   </form>
